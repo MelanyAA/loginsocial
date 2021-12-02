@@ -1,0 +1,61 @@
+.btn {
+  width: 8rem;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 68px 10px 68px 10px;
+  border: 0px;
+  transition: 1;
+  &:focus {
+    outline: solid white;
+  }
+  &:hover {
+    color: darken($color: #cc6e6e, $amount: 20);
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: white;
+  &:disabled {
+    background-color: lighten($color: $primary, $amount: 20px);
+  }
+}
+
+.btn-social {
+  // border: 1px solid $primary;
+  padding: 6px;
+  cursor: pointer;
+  &:active {
+    outline: solid $primary;
+  }
+}
+.btn-facebook {
+  border: 1 px solid $primary;
+  cursor: pointer;
+  height: 31px;
+  padding: 6px;
+  width: 31px;
+  &:active {
+    outline: solid $primary;
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.btn-danger {
+  background-color: red;
+  color: white;
+  transition: 1s ease;
+  &:hover {
+    background-color: darken($color: #b4330c, $amount: 0);
+  }
+}
+.div-Delete {
+  text-align: center;
+  padding: 10px;
+}
