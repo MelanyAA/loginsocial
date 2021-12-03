@@ -73,6 +73,20 @@ export const startSaveNotes = (note) => {
     if (!note.url) {
       delete note.url;
     }
+    if( note.title ==='' || note.body===''){
+      let error ='';
+      if(note.title === ''){
+        error='title';
+      Swal.fire('inf','llene el titulo','info')
+    }
+    if(note.body ===''){
+      Swal.fire('inf','Escribe lo que paso Hoy','info')
+      error=`${error} body`;
+    }
+    return false;
+    }
+   else{
+    
     //****elimino el id del objeto note porque en firebase no necesito insertar el id de la nota ***
     const noteToFirestore = { ...note };
     delete noteToFirestore.id;
@@ -85,6 +99,7 @@ export const startSaveNotes = (note) => {
     Swal.fire("Saved", noteToFirestore.title, "success");
   };
 };
+  }
 
 
 //Refresca los cambios la pag principal hacia al panel lateral de notas 

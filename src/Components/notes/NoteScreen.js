@@ -16,6 +16,7 @@ export const NoteScreen = () => {
   //creamos un efecto para que el form cambie cuando disparemos otra nota y para
   //que no entre en un estado infinito definimos una variable
 
+
   useEffect(() => {
     if (note.id !== activeId.current) {
       reset(note);
