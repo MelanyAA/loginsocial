@@ -22,7 +22,7 @@ export const startNewNote = () => {
       body: "",
       date: new Date().getTime(),
     };
-
+  
     // Add a new document with a generated id.
     const docRef = await addDoc(
       collection(db, `${uid}/Journal/Notes`),
